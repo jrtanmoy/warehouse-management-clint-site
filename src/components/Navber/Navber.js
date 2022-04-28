@@ -12,7 +12,7 @@ const Navber = () => {
             <Navbar className='container' collapseOnSelect expand="lg" sticky='top' bg="success" variant="dark">
                 <Container>
                     <Navbar.Brand as={Link} to="/">
-                        <img height={30} src={logo} alt="" />
+                        <img height={45} src={logo} alt="" />
                     </Navbar.Brand>
                     <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                     <Navbar.Collapse id="responsive-navbar-nav">
