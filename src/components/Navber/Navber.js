@@ -21,7 +21,7 @@ const Navber = () => {
                             <Nav.Link as={Link} to="blogs">Blogs</Nav.Link>
                         </Nav>
                         <Nav className="fw-bolder">
-                            
+                        <Nav.Link as={Link} to="login">Login</Nav.Link>
                         </Nav>
                     </Navbar.Collapse>
                 </Container>
