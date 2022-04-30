@@ -43,7 +43,7 @@ const FrequentlyAsked = () => {
                         </Accordion>
                     </div>
                     <div className="col-md-6 col-lg-6 d-flex justify-content-center align-items-center mt-5 mb-4  pb-4 order-2 order-sm-2 order-md-2 order-lg-2">
-                        <img className="w-100 fixed rounded-3" src={faq1} alt="tiger" />
+                        <img className="w-100 fixed rounded-3" src={faq1} alt="" />
                     </div>
                 </div>
             </section>

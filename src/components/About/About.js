@@ -11,7 +11,6 @@ const About = () => {
                     <div className="p-1 d-flex justify-content-center align-items-center">
                         <img className='w-25 fixed rounded-3' src={aboutpicture} alt="" />
                     </div>
-                    {/* img-fluid */}
                 </div>
                 <div>
                     <div className="p-3 text-center">
