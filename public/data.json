@@ -1,0 +1,113 @@
+[
+    {
+        "id": 1,
+        "name": "Rice",
+        "supplier-name": "Sumon",
+        "price": "250 per container",
+        "quantity": "16 container",
+        "description": "The variety of Rice that we are offering to the market is Parboiled Rice. In accordance to the length of the grains.",
+        "img": "https://i.ibb.co/B3hBStw/rice-1.png"
+    },
+    {
+        "id": 2,
+        "name": "Lentil",
+        "supplier-name": "Himal",
+        "price": "280 per container",
+        "quantity": "12 container",
+        "description": "The variety of Lentil that we are offering to the market is Red Lentil. Lentils must be fresh and in good Shape.",
+        "img": "https://i.ibb.co/3T6hL5Z/lentil-1.png"
+    },
+    {
+        "id": 3,
+        "name": "Sugar",
+        "supplier-name": "Koushik",
+        "price": "270 per container",
+        "quantity": "10 container",
+        "description": "The variety of Sugar that we are offering to the market is White Sugar. Sugar must be dry.",
+        "img": "https://i.ibb.co/jZsML68/sugar-1.png"
+    },
+    {
+        "id": 4,
+        "name": " Flour",
+        "supplier-name": "Mhamud",
+        "price": "240 per container",
+        "quantity": "20 container",
+        "description": "The variety of Flour that we are offering to the market is White Flour. We package our Flour in automatic machine.",
+        "img": "https://i.ibb.co/gRqTXRN/flour-1.png"
+    },
+    {
+        "id": 5,
+        "name": "Salt",
+        "supplier-name": "Rahim",
+        "price": "210 per container",
+        "quantity": "18 container",
+        "description": "The variety of Salt that we are offering to the market is White Salt. Salt must be dry.",
+        "img": "https://i.ibb.co/Q9ktxf0/salt-1.png"
+    },
+    {
+        "id": 6,
+        "name": "Spices",
+        "supplier-name": "Raju",
+        "price": "400 per container",
+        "quantity": "5 container",
+        "description": "The variety of Spices that we are offering to the market is Mixed Spices. Satisfiction guaranted 100%.",
+        "img": "https://i.ibb.co/12YZgGX/spices-1.png"
+    },
+    
+    {
+        "id": 7,
+        "name": "Egg",
+        "supplier-name": "Karim",
+        "price": "180 per container",
+        "quantity": "8 container",
+        "description": "The variety of Egg that we are offering to the market is organic Egg. Freshness guaranted 100%.",
+        "img": "https://i.ibb.co/8PVLHDy/egg-1.png"
+    },
+    {
+        "id": 8,
+        "name": "Oil",
+        "supplier-name": "Masud",
+        "price": "350 per container",
+        "quantity": "12 container",
+        "description": "The variety of Soybean oil that we are offering to the market is Soybean Oil. Extracted through fully automated machine",
+        "img": "https://i.ibb.co/N9z4T7q/soyabin-oil-1-1.png"
+    },
+    {
+        "id": 9,
+        "name": "Apple",
+        "supplier-name": "Sakib",
+        "price": "230 per container",
+        "quantity": "6 container",
+        "description": "The variety of Apple that we are offering to the market is Green Apple. Freshness guaranted 100%.",
+        "img": "https://i.ibb.co/hFL6nww/apple-1.png"
+    },
+    {
+        "id": 10,
+        "name": "Noodles",
+        "supplier-name": "Joy",
+        "price": "200 per container",
+        "quantity": "8 container",
+        "description": "The variety of Noodles that we are offering to the market is Instant Noodles. It's a very running product.",
+        "img": "https://i.ibb.co/tctyhY6/noodles-1-1.png"
+    },
+    {
+        "id": 11,
+        "name": "Vegetables",
+        "supplier-name": "Alamin",
+        "price": "220 per container",
+        "quantity": "4 container",
+        "description": "The variety of Vegetables that we are offering to the market is Mixed Vegetables. Freshness guaranted 100%.",
+        "img": "https://i.ibb.co/ZhDhcDP/veg-1.png"
+    },
+    {
+        "id": 12,
+        "name": "Toiletries",
+        "supplier-name": "Montu",
+        "price": "330 per container",
+        "quantity": "6 container",
+        "description": "The variety of Toiletries that we are offering to the market is Soap. It's a very usefull product.",
+        "img": "https://i.ibb.co/bgvMvqy/toiletries-1.png"
+    }
+    
+    
+]

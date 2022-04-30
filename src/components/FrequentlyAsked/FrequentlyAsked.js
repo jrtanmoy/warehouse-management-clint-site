@@ -34,9 +34,15 @@ const FrequentlyAsked = () => {
                                    I collaborate with others professionaly. 
                                 </Accordion.Body>
                             </Accordion.Item>
+                            <Accordion.Item eventKey="4">
+                                <Accordion.Header>How much safe is your warehouse?</Accordion.Header>
+                                <Accordion.Body>
+                                It is built with all the safety measures and regularly checkd by an expert.
+                                </Accordion.Body>
+                            </Accordion.Item>
                         </Accordion>
                     </div>
-                    <div className="col-md-6 col-lg-6 d-flex justify-content-center align-items-center mb-4  pb-4 order-2 order-sm-2 order-md-2 order-lg-2">
+                    <div className="col-md-6 col-lg-6 d-flex justify-content-center align-items-center mt-5 mb-4  pb-4 order-2 order-sm-2 order-md-2 order-lg-2">
                         <img className="w-100 fixed rounded-3" src={faq1} alt="tiger" />
                     </div>
                 </div>
