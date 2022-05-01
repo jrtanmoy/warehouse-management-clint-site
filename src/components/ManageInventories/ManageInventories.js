@@ -2,6 +2,7 @@ import React from 'react';
 import useInventories from '../Hooks/useInventories';
 import ManageInventory from '../ManageInventory/ManageInventory';
 import '../Inventories/Inventories.css'
+import { Link } from 'react-router-dom';
 
 const ManageInventories = () => {
     const [inventories] = useInventories([]);
@@ -18,6 +19,12 @@ const ManageInventories = () => {
                         </ManageInventory>)
                     }
                 </div>
+                <Link
+                    to='/addnewitem'
+                    className='btn btn-primary w-25 mx-auto mt-5 mb-5 fs-4'
+                >
+                    Add New Item
+                </Link>
             </div>
         </div>
     );

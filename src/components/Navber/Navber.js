@@ -30,6 +30,7 @@ const Navber = () => {
                             <Nav.Link as={Link} to="home">Home</Nav.Link>
                             <Nav.Link as={Link} to="checkout">Checkout</Nav.Link>
                             <Nav.Link as={Link} to="manageinventories">Manage-Inventories</Nav.Link>
+                            <Nav.Link as={Link} to="addnewitem">Add</Nav.Link>
                             <Nav.Link as={Link} to="blogs">Blog</Nav.Link>
                         </Nav>
                         <Nav className="fw-bolder">
