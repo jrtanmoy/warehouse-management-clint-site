@@ -14,10 +14,10 @@ const InventoryDetail = () => {
             .then(data => setInventroy(data));
     })
     return (
-        <div className='container d-flex align-items-center justify-content-center'>
-            <div>
-                <h2 className='text-center  mt-4 mb-4'>Welcome to detail</h2>
-                <div className='inventory'>
+        <div className='container'>
+            <h2 className='text-center  mt-4 mb-4'>Welcome to detail</h2>
+            <div className='row gx-2 d-flex align-items-center justify-content-center'>
+                <div className='col inventory'>
                     <img className='img-fluid' src={inventory.img} alt="" />
                     <div className='inventory-info mt-4'>
                         <h2 className='text-primary'>{inventory.name}</h2>
@@ -27,10 +27,18 @@ const InventoryDetail = () => {
                         <p><small>{inventory.description}</small></p>
                     </div>
                 </div>
-                <div className='text-center mt-4 mb-5 '>
-                    <Link to="/checkout">
-                        <button className='btn btn-primary'>Proceed Checkout</button>
-                    </Link>
+
+                <div className='col text-center mt-4 mb-5 '>
+                    <div className='mb-4'>
+                        <Link to='/checkout'>
+                            <button className='btn btn-primary'>Proceed Checkout</button>
+                        </Link>
+                    </div>
+                    <div>
+                        <Link to='/manageinventories'>
+                            <button className='btn btn-primary'>Manage Inventories</button>
+                        </Link>
+                    </div>
                 </div>
             </div>
         </div>
