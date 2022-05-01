@@ -16,15 +16,13 @@ const InventoryDetail = () => {
     })
 
     const handleUpdateRestock = event =>{
-        const { _id, name, supplierName, img, description, price, quantity } = inventory;
-        const oldquantity = parseInt(quantity);
-        console.log(oldquantity);
         event.preventDefault();
+        const { quantity } = inventory;
+        const oldquantity = parseInt(quantity);
         const restockquantity = parseInt(event.target.quantity.value);
-        console.log(restockquantity);
         const totalQuantity = oldquantity+ restockquantity;
 
-        const updatedRestock = {totalQuantity};
+        const updatedStock = {totalQuantity};
 
         // send data to the server
         const url = `http://localhost:5000/inventory/${inventoryId}`;
@@ -33,7 +31,7 @@ const InventoryDetail = () => {
             headers: {
                 'content-type': 'application/json'
             },
-            body: JSON.stringify(updatedRestock)
+            body: JSON.stringify(updatedStock)
         })
         .then(res => res.json())
         .then(data =>{
@@ -42,6 +40,32 @@ const InventoryDetail = () => {
             event.target.reset();
         })
     }
+
+    const handleUpdateDelivered = () =>{
+        
+        const { quantity } = inventory;
+        const oldquantity = parseInt(quantity);
+        
+        const totalQuantity = oldquantity - 1;
+
+        const updatedStock = {totalQuantity};
+
+        // send data to the server
+        const url = `http://localhost:5000/inventory/${inventoryId}`;
+        fetch(url, {
+            method: 'PUT',
+            headers: {
+                'content-type': 'application/json'
+            },
+            body: JSON.stringify(updatedStock)
+        })
+        .then(res => res.json())
+        .then(data =>{
+            console.log('success', data);
+            alert('Delivered successfully!!!');
+        })
+    }
+
 
     return (
         <div className='container'>
@@ -61,13 +85,14 @@ const InventoryDetail = () => {
                 <div className='col text-center mt-4 mb-5 '>
                     <div className='mb-4'>
                         <form onSubmit={handleUpdateRestock}>
+                            <h5>Restock the items</h5>
                             <input className='mb-2' type="number" name="quantity" placeholder='Quantity' required />
                             <br />
-                            <input type="submit" value="Restock the items" />
+                            <input type="submit" value="Add" />
                         </form>
                     </div>
                     <div className='mb-4'>
-                        <button className='btn btn-primary w-25 mx-auto'>Delivered</button>
+                        <button onClick={handleUpdateDelivered} className='btn btn-primary w-25 mx-auto'>Delivered</button>
                     </div>
                     <div className='mb-4'>
                         <Link to='/checkout'>
