@@ -1,13 +1,28 @@
 import React from 'react';
-import { useNavigate } from 'react-router-dom';
+import useInventories from '../Hooks/useInventories';
+
 import '../Inventory/Inventory.css';
 
-const ManageInventory = ({ inventory }) => {
+const ManageInventory = ({ inventory, ui }) => {
     console.log(inventory);
     const { _id, name, supplierName, img, description, price, quantity } = inventory;
-    const navigate = useNavigate();
-    const navigateToInventoryDetail = id => {
-        navigate(`/inventory/${id}`);
+    const {inventories,setInventories} = ui;
+    
+    const handleDelete = id => {
+        const proceed = window.confirm('Are you sure?');
+        if(proceed){
+            const url = `http://localhost:5000/inventory/${id}`
+            fetch(url, {
+                method: 'DELETE'
+            })
+            .then(res => res.json())
+            .then(data => {
+                console.log(data);
+                const remaining = inventories.filter(inventory => inventory._id !== id);
+                setInventories(remaining);
+            })
+            
+        }
     }
     return (
         <div className='inventory'>
@@ -19,7 +34,7 @@ const ManageInventory = ({ inventory }) => {
             <p>Quantity: {quantity}</p>
             <p><small>{description}</small></p>
         </div>
-        <button onClick={() => navigateToInventoryDetail(_id)} className='btn-cart'>Delete</button>
+        <button onClick={() => handleDelete(_id)} className='btn-cart'>Delete</button>
     </div>
     );
 };

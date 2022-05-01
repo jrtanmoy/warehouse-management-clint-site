@@ -5,7 +5,7 @@ import '../Inventories/Inventories.css'
 import { Link } from 'react-router-dom';
 
 const ManageInventories = () => {
-    const [inventories] = useInventories([]);
+    const [inventories, setInventories] = useInventories([]);
     return (
         <div id="inventories" className='container'>
             <div className="row">
@@ -15,8 +15,10 @@ const ManageInventories = () => {
                         inventories.map(inventory => <ManageInventory
                             key={inventory._id}
                             inventory={inventory}
+                            ui = {{inventories,setInventories}}
                         >
                         </ManageInventory>)
+                       
                     }
                 </div>
                 <Link

@@ -29,12 +29,16 @@ const Navber = () => {
                         <Nav className="me-auto fw-bolder">
                             <Nav.Link as={Link} to="home">Home</Nav.Link>
                             <Nav.Link as={Link} to="checkout">Checkout</Nav.Link>
-                            <Nav.Link as={Link} to="manageinventories">Manage-Inventories</Nav.Link>
-                            <Nav.Link as={Link} to="addnewitem">Add</Nav.Link>
                             <Nav.Link as={Link} to="blogs">Blog</Nav.Link>
                         </Nav>
                         <Nav className="fw-bolder">
-                        <Nav.Link as={Link} to="about">About</Nav.Link>
+                            <Nav.Link as={Link} to="about">About</Nav.Link>
+                            {
+                                user && <>
+                                <Nav.Link as={Link} to="addnewitem">Add</Nav.Link>
+                                <Nav.Link as={Link} to="manageinventories">Manage-Inventories</Nav.Link>
+                                </>
+                            }
                             {
                                 user ?
                                     <button className='btn btn-link text-white fw-bold text-decoration-none' onClick={handleSignOut}>sign out</button>
