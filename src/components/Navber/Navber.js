@@ -37,6 +37,7 @@ const Navber = () => {
                                 user && <>
                                 <Nav.Link as={Link} to="addnewitem">Add</Nav.Link>
                                 <Nav.Link as={Link} to="manageinventories">Manage-Inventories</Nav.Link>
+                                <Nav.Link as={Link} to="myitems">My-Items</Nav.Link>
                                 </>
                             }
                             {

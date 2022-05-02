@@ -12,6 +12,7 @@ import CheckoutOrder from './components/Checkout/CheckoutOrder';
 import RequireAuth from './components/RequireAuth/RequireAuth';
 import ManageInventories from './components/ManageInventories/ManageInventories';
 import AddNewItem from './components/AddNewItem/AddNewItem';
+import MyItems from './components/MyItems/MyItems';
 
 function App() {
   return (
@@ -29,6 +30,11 @@ function App() {
           element={
             <RequireAuth>
               <ManageInventories />
+            </RequireAuth>} />
+        <Route path='/myitems'
+          element={
+            <RequireAuth>
+              <MyItems />
             </RequireAuth>} />
         <Route path='/addnewitem'
           element={
