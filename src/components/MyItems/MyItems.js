@@ -1,24 +1,26 @@
-import axios from 'axios';
-import React, { useEffect, useState } from 'react';
-import { useAuthState } from 'react-firebase-hooks/auth';
-import { auth } from '../../firebase.init';
+import React from 'react';
+import useMyItems from '../Hooks/useMyItems';
+import '../Inventories/Inventories.css'
+import MyItem from '../MyItem/MyItem';
 
 const MyItems = () => {
-    const [user] = useAuthState(auth);
-    const [myItems, setMyItems] = useState([])
-    useEffect(() => {
-        const getMyItems = async () => {
-            const email = user.email;
-            const url = `http://localhost:5000/myItem?email=${email}`;
-            const { data } = await axios.get(url);
-            setMyItems(data);
-        }
-        getMyItems();
-
-    }, [user])
+    const [myItems, setMyItems] = useMyItems([])
     return (
-        <div>
-            <h1>Your items: {myItems.length}</h1>
+        <div id="inventories" className='container'>
+            <div className="row">
+                <h1 className='text-success text-center mt-5 mb-5'>My Items:{myItems.length}</h1>
+                <div className="p-2 gap-5 inventories-container">
+                    {
+                        myItems.map(myItem => <MyItem
+                            key={myItem._id}
+                            myItem={myItem}
+                            ui={{ myItems, setMyItems }}
+                        >
+                        </MyItem>)
+
+                    }
+                </div>
+            </div>
         </div>
     );
 };

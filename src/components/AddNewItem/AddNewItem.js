@@ -7,11 +7,11 @@ import { toast, ToastContainer } from 'react-toastify';
 
 const AddNewItem = () => {
     const [user] = useAuthState(auth);
-    if(user){
+    if (user) {
         console.log(user);
     }
 
-    const addItem = event =>{
+    const addItem = event => {
         event.preventDefault();
         const item = {
             supplierName: user.displayName,
@@ -21,25 +21,17 @@ const AddNewItem = () => {
             quantity: event.target.quantity.value,
             description: event.target.description.value,
             img: event.target.img.value
-            
+
         }
         axios.post('http://localhost:5000/inventory', item)
-        .then(response =>{
-            console.log(response);
-            // const {data} = response;
-            // if(data.insertedId){
-            //     toast('Your item is added!!');
-            //     event.target.reset();
-            // }
-        })
-        axios.post('http://localhost:5000/myItem', item)
-        .then(response =>{
-            const {data} = response;
-            if(data.insertedId){
-                toast('Your item is added!!');
-                event.target.reset();
-            }
-        })
+            .then(response => {
+                // console.log(response);
+                const { data } = response;
+                if (data.insertedId) {
+                    toast('Your item is added!!');
+                    event.target.reset();
+                }
+            })
 
     }
 
@@ -48,7 +40,7 @@ const AddNewItem = () => {
         <div className='w-50 mx-auto mt-4'>
             <h1>Please add new item.</h1>
             <form onSubmit={addItem}>
-                <input className='w-100 mb-2' type="text" value={user?.displayName} name="name" placeholder ="name" required readOnly disabled />
+                <input className='w-100 mb-2' type="text" value={user?.displayName} name="name" placeholder="name" required readOnly disabled />
                 <br />
                 <input className='w-100 mb-2' type="email" value={user?.email} name="email" placeholder="email" required readOnly disabled />
                 <br />

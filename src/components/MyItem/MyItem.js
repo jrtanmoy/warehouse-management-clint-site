@@ -1,13 +1,13 @@
 import React from 'react';
-
 import '../Inventory/Inventory.css';
 
-const ManageInventory = ({ inventory, ui }) => {
-    console.log(inventory);
-    const { _id, name, supplierName, img, description, price, quantity } = inventory;
-    const { inventories, setInventories } = ui;
+const MyItem = ({ myItem, ui }) => {
 
+    const { _id, name, supplierName, img, description, price, quantity } = myItem;
+    const { myItems, setMyItems } = ui;
+   
     const handleDelete = id => {
+        console.log(id)
         const proceed = window.confirm('Are you sure?');
         if (proceed) {
             const url = `http://localhost:5000/inventory/${id}`
@@ -17,8 +17,8 @@ const ManageInventory = ({ inventory, ui }) => {
                 .then(res => res.json())
                 .then(data => {
                     console.log(data);
-                    const remaining = inventories.filter(inventory => inventory._id !== id);
-                    setInventories(remaining);
+                    const remaining = myItems.filter(myItem => myItem._id !== id);
+                    setMyItems(remaining);
                 })
 
         }
@@ -34,8 +34,9 @@ const ManageInventory = ({ inventory, ui }) => {
                 <p><small>{description}</small></p>
             </div>
             <button onClick={() => handleDelete(_id)} className='btn-cart'>Delete</button>
+
         </div>
     );
 };
 
-export default ManageInventory;
+export default MyItem;
