@@ -81,32 +81,33 @@ const InventoryDetail = () => {
                             <h4>Supplier Name: {inventory.supplierName}</h4>
                             <p>Price: ${inventory.price}</p>
                             <p>Quantity: {inventory.quantity}</p>
+                            <p>Item ID: {inventory._id}</p>
+
                             <p><small>{inventory.description}</small></p>
                         </div>
                     </div>
                 </div>
 
-                <div className=' text-center mt-4 mb-5 '>
+                <div className='  d-flex align-items-center justify-content-center mt-4 mb-5 '>
+                    <div className='text-center'>
                     <div className='mb-4'>
-                        <form onSubmit={handleUpdateRestock}>
-                            <h5>Restock the items</h5>
-                            <input className='mb-2' type="number" name="quantity" placeholder='Quantity' required />
-                            <br />
-                            <input type="submit" value="Add" />
+                        <form className='mb-5' onSubmit={handleUpdateRestock}>
+                            <h5 className='mb-4'>Restock the items:</h5>
+                            <div className='d-flex'>
+                            <input className='mb-2 fs-5 p-2 rounded' type="number" name="quantity" placeholder='Quantity' required />
+                           
+                            <input className='mb-2 ms-4 fs-5 p-2 rounded' type="submit" value="Add" />
+                            </div>
                         </form>
                     </div>
                     <div className='mb-4'>
-                        <button onClick={handleUpdateDelivered} className='btn btn-primary w-50 mx-auto'>Delivered</button>
-                    </div>
-                    <div className='mb-4'>
-                        <Link to='/checkout'>
-                            <button className='btn btn-primary w-50 mx-auto'>Proceed Checkout</button>
-                        </Link>
+                        <button onClick={handleUpdateDelivered} className='btn btn-primary w-100 mx-auto fs-5'>Delivered</button>
                     </div>
                     <div>
                         <Link to='/manageinventories'>
-                            <button className='btn btn-primary w-50 mx-auto'>Manage Inventories</button>
+                            <button className='btn btn-primary w-100 mx-auto fs-5'>Manage Inventories</button>
                         </Link>
+                    </div>
                     </div>
                 </div>
 

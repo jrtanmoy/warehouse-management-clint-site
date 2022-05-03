@@ -8,7 +8,6 @@ import Login from './components/Login/Login';
 import Signup from './components/Signup/Signup';
 import About from './components/About/About';
 import InventoryDetail from './components/InventoryDetail/InventoryDetail';
-import CheckoutOrder from './components/Checkout/CheckoutOrder';
 import RequireAuth from './components/RequireAuth/RequireAuth';
 import ManageInventories from './components/ManageInventories/ManageInventories';
 import AddNewItem from './components/AddNewItem/AddNewItem';
@@ -41,7 +40,6 @@ function App() {
             <RequireAuth>
               <AddNewItem />
             </RequireAuth>} />
-        <Route path="/checkout" element={<CheckoutOrder />} />
         <Route path="/blogs" element={<Blogs />} />
         <Route path="/about" element={<About />} />
         <Route path="/login" element={<Login />} />
