@@ -4,6 +4,8 @@ import { useLocation, useNavigate } from "react-router-dom";
 import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { auth } from "../../firebase.init";
+import useToken from "../Hooks/useToken";
+import Loading from "../Loading/Loading";
 
 import "../Login/Login.css";
 
@@ -23,6 +25,10 @@ const Signup = () => {
 
     const [createUserWithEmailAndPassword, user, loading, hookError] =
         useCreateUserWithEmailAndPassword(auth, { sendEmailVerification: true });
+    const [token] = useToken(user);
+
+
+    
 
     const handleEmailChange = (e) => {
         const emailRegex = /\S+@\S+\.\S+/;
@@ -81,16 +87,21 @@ const Signup = () => {
             }
         }
     }, [hookError]);
+    
 
     const navigate = useNavigate();
     const location = useLocation();
     const from = location.state?.from?.pathname || "/";
 
     useEffect(() => {
-        if (user) {
+        if (token) {
             navigate(from);
         }
-    }, [user]);
+    }, [token]);
+    
+    if (loading) {
+        return <Loading></Loading>
+    }
 
     return (
         <div className="login-container">

@@ -11,8 +11,8 @@ const useMyItems = () => {
     const navigate = useNavigate();
     useEffect(() => {
         const getMyItems = async () => {
-            const email = user.email;
-            const url = `http://localhost:5000/inventoryForUser?email=${email}`;
+            const email = user?.email;
+            const url = `https://thawing-eyrie-73299.herokuapp.com/inventoryForUser?email=${email}`;
             try{
                 const { data } = await axios.get(url, {
                     headers: {

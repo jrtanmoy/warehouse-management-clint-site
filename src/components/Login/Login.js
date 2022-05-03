@@ -6,6 +6,8 @@ import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { auth } from "../../firebase.init";
 import googlelogo from '../../images/google.svg'
+import useToken from "../Hooks/useToken";
+import Loading from "../Loading/Loading";
 import "./Login.css";
 
 
@@ -24,6 +26,7 @@ const Login = () => {
     const [signInWithGoogle, googleUser, loading2, googleError] = useSignInWithGoogle(auth);
 
     const [sendPasswordResetEmail, sending] = useSendPasswordResetEmail(auth);
+    const [token] = useToken(user || googleUser);
 
     const handleEmailChange = (e) => {
         const emailRegex = /\S+@\S+\.\S+/;
@@ -63,8 +66,7 @@ const Login = () => {
         console.log(userInfo)
 
         await signInWithEmail(userInfo.email, userInfo.password);
-        const {data} = await axios.post('http://localhost:5000/login', {email});
-        localStorage.setItem('accessToken', data.accessToken);
+       
 
     }
 
@@ -73,10 +75,10 @@ const Login = () => {
     const from = location.state?.from?.pathname || "/";
 
     useEffect(() => {
-        if (user || googleUser) {
+        if (token) {
             navigate(from);
         }
-    }, [user, googleUser]);
+    }, [token]);
 
     useEffect(() => {
         const error = hookError || googleError;
@@ -104,6 +106,9 @@ const Login = () => {
         else {
             toast('please enter your email address');
         }
+    }
+    if (loading) {
+        return <Loading></Loading>
     }
 
     return (

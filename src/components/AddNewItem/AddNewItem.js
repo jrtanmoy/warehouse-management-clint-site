@@ -23,7 +23,7 @@ const AddNewItem = () => {
             img: event.target.img.value
 
         }
-        axios.post('http://localhost:5000/inventory', item)
+        axios.post('https://thawing-eyrie-73299.herokuapp.com/inventory', item)
             .then(response => {
                 // console.log(response);
                 const { data } = response;

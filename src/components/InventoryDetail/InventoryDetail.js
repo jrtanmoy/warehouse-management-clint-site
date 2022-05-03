@@ -6,10 +6,11 @@ import './InventoryDetail.css'
 const InventoryDetail = () => {
     const { inventoryId } = useParams();
     const [inventory, setInventroy] = useState({});
+    
 
 
     useEffect(() => {
-        const url = `http://localhost:5000/inventory/${inventoryId}`
+        const url = `https://thawing-eyrie-73299.herokuapp.com/inventory/${inventoryId}`
 
         fetch(url)
             .then(res => res.json())
@@ -26,7 +27,7 @@ const InventoryDetail = () => {
         const updatedStock = { totalQuantity };
 
         // send data to the server
-        const url = `http://localhost:5000/inventory/${inventoryId}`;
+        const url = `https://thawing-eyrie-73299.herokuapp.com/inventory/${inventoryId}`;
         fetch(url, {
             method: 'PUT',
             headers: {
@@ -52,7 +53,7 @@ const InventoryDetail = () => {
         const updatedStock = { totalQuantity };
 
         // send data to the server
-        const url = `http://localhost:5000/inventory/${inventoryId}`;
+        const url = `https://thawing-eyrie-73299.herokuapp.com/inventory/${inventoryId}`;
         fetch(url, {
             method: 'PUT',
             headers: {
