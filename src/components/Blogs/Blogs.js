@@ -18,7 +18,7 @@ const Blogs = () => {
                 <p className='fs-5 fst-italic'>b) Ans : MongoDB are a good choice when my data is document-centric and doesn't fit well into the schema of a relational database, when i need to accommodate massive scale, when i am rapidly prototyping, and a few other use cases.</p>
             </div>
             <div>
-                <h4>1. Differences between sql and nosql databases?</h4>
+                <h4>3. Differences between sql and nosql databases?</h4>
                 <p className='fs-5 fst-italic'>Ans :</p>
                 <p className='fs-5 fst-italic'>a) The full form of SQL is RELATIONAL DATABASE MANAGEMENT SYSTEM on the other hand NoSQL is Non-relational or distributed database system.</p>
                 <p className='fs-5 fst-italic'>b) SQL databases have fixed or static or predefined schema on the other hand NoSQL have dynamic schema.</p>
@@ -26,7 +26,7 @@ const Blogs = () => {
                 <p className='fs-5 fst-italic'>d) SQL databases are Vertically Scalable but NoSQL databases are Horizontally scalable</p>
             </div>
             <div>
-                <h4>2. What is the purpose of jwt and how does it work?</h4>
+                <h4>4. What is the purpose of jwt and how does it work?</h4>
                 <p className='fs-5 fst-italic'>a) Ans : JWT, or JSON Web Token, is an open standard used to share security information between two parties — a client and a server. In short, JWTs are used as a secure way to authenticate users and share information. Each JWT contains encoded JSON objects, including a set of claims. Typically, a private key, or secret, is used by the issuer to sign the JWT. The receiver of the JWT will verify the signature to ensure that the token hasn't been altered after it was signed by the issuer.</p>
             </div>
 
