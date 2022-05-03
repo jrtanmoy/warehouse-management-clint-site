@@ -22,7 +22,7 @@ const Inventories = () => {
                 </div>
                 <Link
                     to='/manageinventories'
-                    className='btn btn-primary w-25 mx-auto mt-4 fs-4'
+                    className='btn btn-primary w-25 mx-auto mt-5 pt-2 fs-4'
                 >
                     Manage Inventories
                 </Link>

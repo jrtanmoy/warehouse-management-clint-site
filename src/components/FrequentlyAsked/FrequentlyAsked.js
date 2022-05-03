@@ -44,6 +44,8 @@ const FrequentlyAsked = () => {
                     </div>
                     <div className="col-md-6 col-lg-6 d-flex justify-content-center align-items-center mt-5 mb-4  pb-4 order-2 order-sm-2 order-md-2 order-lg-2">
                         <img className="w-100 fixed rounded-3" src={faq1} alt="" />
+                        {/* <h2 className="display-5 text-success fw-bold text-center mb-3 pb-2">All Activity</h2>
+            <img className="w-50 mx-auto d-block fixed rounded-3" src={allactivity} alt="" /> */}
                     </div>
                 </div>
             </section>

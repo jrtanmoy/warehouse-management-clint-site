@@ -3,6 +3,7 @@ import { useAuthState } from 'react-firebase-hooks/auth';
 import { auth } from '../../firebase.init';
 import About from '../About/About';
 import Banner from '../Banner/Banner';
+import Distribution from '../Distribution/Distribution';
 import Footer from '../Footer/Footer';
 import FrequentlyAsked from '../FrequentlyAsked/FrequentlyAsked';
 import Inventories from '../Inventories/Inventories';
@@ -17,6 +18,7 @@ const Home = () => {
         <div>
             <Banner></Banner>
             <Inventories></Inventories>
+            <Distribution></Distribution>
             <FrequentlyAsked></FrequentlyAsked>
             <About></About>
             <Footer></Footer>
