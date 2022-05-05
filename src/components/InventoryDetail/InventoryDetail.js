@@ -15,7 +15,7 @@ const InventoryDetail = () => {
         fetch(url)
             .then(res => res.json())
             .then(data => setInventroy(data));
-    })
+    },[inventory])
 
     const handleUpdateRestock = event => {
         event.preventDefault();
@@ -37,6 +37,7 @@ const InventoryDetail = () => {
         })
             .then(res => res.json())
             .then(data => {
+                setInventroy(data);
                 console.log('success', data);
                 alert('Restock the item quantity successfully!!!');
                 event.target.reset();
@@ -63,6 +64,7 @@ const InventoryDetail = () => {
         })
             .then(res => res.json())
             .then(data => {
+                setInventroy(data);
                 console.log('success', data);
                 alert('Delivered successfully!!!');
             })
