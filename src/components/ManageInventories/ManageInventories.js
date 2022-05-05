@@ -9,7 +9,7 @@ const ManageInventories = () => {
     return (
         <div id="inventories" className='container'>
             <div className="row">
-                <h1 className='text-success text-center mt-5 mb-5'>Inventory Items</h1>
+                <h1 className='text-success text-center mt-5 mb-5'>All Inventory Items</h1>
                 <div className="p-2 gap-5 inventories-container">
                     {
                         inventories.map(inventory => <ManageInventory
